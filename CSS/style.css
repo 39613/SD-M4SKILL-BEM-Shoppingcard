@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+    /* alles reseten*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+}
+
+html {
+    /* de html Font size op 10 pixels zetten. 1rem => 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #dbb05a;
+    background: linear-gradient(180deg, rgba(219, 176, 90, 1) 0%, rgba(207, 101, 145, 1) 100%);
+    display: grid;
+    grid-template-rows: repeat(13, 1fr);
+    grid-template-columns: repeat(13, 1fr);
+    font-family: sans-serif;
+}
+
+.product__shoppingCart-div{
+    grid-column:13/13 ;
+    grid-row: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__shoppingCart{
+    margin-top: 3rem;
+    font-size: 4rem;
+}
+
+/* .product__shoppingCart-amount{
+    position:absolute;
+    right: 2.6%;
+    color: white;
+    border: white solid 2px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    font-size: 1.6rem;
+    background-color: red;
+    border-radius: 100%;
+} */
+
+.product {
+    box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    background-color: white;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product__1 {
+    grid-column: 2/5;
+    grid-row: 3/11;
+}
+
+.product__2 {
+    grid-column: 6/9;
+    grid-row: 3/11;
+}
+
+.product__3 {
+    grid-column: 10/13;
+    grid-row: 3/11;
+}
+
+.product__out-of-stock{
+    color: red;
+    font-size: 2rem;
+}
+
+.product__image{
+    width: 60%;
+    height: 60%;
+    margin-bottom: 1rem;
+}
+
+.Big3Img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.product__bestel_button{
+    width:15rem ;
+    height:3rem ;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.product__bestel_button:hover{
+    cursor: pointer;
+}
+
+.product__bestel_button--disabled{
+    width:15rem ;
+    height:3rem ;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    background-color: #979797;
+}
+
+.product__prijs{
+    font-size: 3rem;
+}
+
+.product__bestel_button:active{
+    background-color: #726a6a;
+}
+
+.DisplayHide{
+    display: none;
+}
+
+.DisplayShow{
+    position:absolute;
+    right: 2.6%;
+    color: white;
+    border: white solid 2px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    font-size: 1.4rem;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.DisplayShow9{
+    position:absolute;
+    right: 2.6%;
+    color: white;
+    border: white solid 2px;
+    padding: 0.1rem;
+    font-size: 1.4rem;
+    background-color: red;
+    border-radius: 100%;
+}
