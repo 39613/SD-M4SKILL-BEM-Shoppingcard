@@ -26,6 +26,7 @@ body{
     grid-template-rows: repeat(13, 1fr);
     grid-template-columns: repeat(13, 1fr);
     font-family: sans-serif;
+    max-height: 100vh;
 }
 
 .product__shoppingCart-div{
