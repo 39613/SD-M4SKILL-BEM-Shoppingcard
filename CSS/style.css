@@ -18,15 +18,14 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
-
-body{
+main{
     background: #dbb05a;
     background: linear-gradient(180deg, rgba(219, 176, 90, 1) 0%, rgba(207, 101, 145, 1) 100%);
     display: grid;
-    grid-template-rows: repeat(13, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-template-columns: repeat(13, 1fr);
     font-family: sans-serif;
-    max-height: 100vh;
+    min-height: 100vh;
 }
 
 .product__shoppingCart-div{
@@ -64,21 +63,22 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
+    margin-top: 3rem;
 }
 
 .product__1 {
     grid-column: 2/5;
-    grid-row: 3/11;
+    grid-row: 2/9;
 }
 
 .product__2 {
     grid-column: 6/9;
-    grid-row: 3/11;
+    grid-row: 2/9;
 }
 
 .product__3 {
     grid-column: 10/13;
-    grid-row: 3/11;
+    grid-row: 2/9;
 }
 
 .product__out-of-stock{
@@ -88,8 +88,8 @@ body{
 
 .product__image{
     width: 60%;
-    height: 60%;
     margin-bottom: 1rem;
+    object-fit: contain;
 }
 
 .Big3Img{
@@ -104,6 +104,7 @@ body{
     background-color: #333;
     color: white;
     font-size: 1.5rem;
+
 }
 
 .product__bestel_button:hover{
@@ -133,7 +134,7 @@ body{
 
 .DisplayShow{
     position:absolute;
-    right: 2.6%;
+    right: 2%;
     color: white;
     border: white solid 2px;
     padding-left: 0.4rem;
@@ -145,11 +146,46 @@ body{
 
 .DisplayShow9{
     position:absolute;
-    right: 2.6%;
+    right: 1.7%;
     color: white;
     border: white solid 2px;
     padding: 0.1rem;
     font-size: 1.4rem;
     background-color: red;
     border-radius: 100%;
+}
+
+@media screen and (max-width : 81.25rem) {
+    body{
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+}
+.product__1 {
+    grid-column: 2/6;
+    grid-row: 2/10;
+}
+
+.product__2 {
+    grid-column: 7/11;
+    grid-row: 2/10;
+}
+
+.product__3 {
+    grid-column: 12/16;
+    grid-row: 2/10;
+}
+.product__shoppingCart-div{
+    grid-column:16/16 ;
+    grid-row: 1/1;
+}
+
+}
+
+@media screen and (max-width : 74rem) {
+    .product__titel{
+        font-size: 140%;
+    }
+    .product__beschrijving{
+        font-size: 80%;
+    }
 }
